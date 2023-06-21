@@ -179,7 +179,92 @@
     *among others*.
 
 
-      
+ ### CSS Terms
+
+ - Selectors 
+  - designates which element or elements within our HTML to target and apply style. 
+  - may be general (every paragraph on a page) or specific (a particular paragraph on the page).
+  - generally target an attribute value such as an `id` or `class` value, or the type of element `<h1>` or `<p>`.
+
+  - Selectors are followed with curly brackets which encompass the style to be applied to the selected element.
+    - Example: selector targeting all `<p>` elements. 
+      - `p { ... }`
+
+  
+  - Properties 
+    - Once element selected, property determines styles applied to element. 
+      - occur after selector within the curly brackets, preceding a colon. 
+    
+    - Example properties: 
+      - `background color`
+      - `font size`
+      - `height`
+      - `width`
+
+    - Example defining `color` and `font-size` properties applied to all `<p>` elements. 
+
+    ```css 
+    p {
+      color: ...;
+      font-size: ...;
+    }
+    ```
+
+  - Values 
+    - Defines behavior of property.
+    - text between `:` and `;`
+
+    - Example: selecting all `<p>` elements and setting value of the `color` property to `orange` and the value of the `font-size` property to `16` pixels. 
+
+    ```css
+    p {
+      color: orange;
+      font-size: 16px;
+    }
+    ```
+
+  **Review Summary CSS**
+
+  In CSS our rule begins with the selector, immediately followed by curly brackets. Within curly brackets are declarations consisting of property and value pairs. Each declaration begins with a property, followed by a colon, the property value, and a semicolon. 
+
+
+  #### Working with Selectors 
+
+  - Most Common Selectors: 
+
+    - Type Selectors 
+      - target by element type
+      - Example: 
+        - `div { ... }` targets all division elements. 
+
+    - Class Selectors 
+      - target based on `class` attribute value. 
+      - more specific than type selectors, and allows assignment of style to different element types using the same `class` attribute.
+        - example: 
+          `.awesome { ... }` 
+          - targets in html...
+          ```html 
+          <div class="awesome">...</div>
+          <p class="awesome">...</p>
+          ```
+
+    - ID Selectors 
+      - further precision 
+      - target one unique element at a time. 
+      - use element's `id` attribute value as the selector. 
+
+      - `id` attribute values can only be used once per page, and should be reserved for significant elements. 
+
+      - ID selectors defined with leading `#` followed by `id` attribute value. 
+        - Example: `#lawton { ... }`
+          - targets `<div id="lawton">...</div>`
+
+
+  ### Referencing CSS file in HTML 
+
+  
+
+
 
 
 
