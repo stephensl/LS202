@@ -262,7 +262,18 @@
 
   ### Referencing CSS file in HTML 
 
-  
+  *best practice is to include all styles in a single external style sheet which is referenced within the `<head>` element of HTML document*
+
+  - Allows for use of same styles across entire site, and quickly making changes site-wide. 
+
+  #### Linking in HTML 
+    - Within `<head>` element of HTML document...
+      
+      - `<link>` element used to define relationship between HTML and CSS file. 
+      
+      - `<rel>` attribute with value `stylesheet` to specify relationship. 
+      
+      - `<href>` attribute is used to identify the location, or path of CSS file. 
 
 
 
