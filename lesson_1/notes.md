@@ -267,14 +267,74 @@
   - Allows for use of same styles across entire site, and quickly making changes site-wide. 
 
   #### Linking in HTML 
-    - Within `<head>` element of HTML document...
-      
-      - `<link>` element used to define relationship between HTML and CSS file. 
-      
-      - `<rel>` attribute with value `stylesheet` to specify relationship. 
-      
-      - `<href>` attribute is used to identify the location, or path of CSS file. 
+  - Within `<head>` element of HTML document...
+    
+    - `<link>` element used to define relationship between HTML and CSS file. 
+    
+    - `<rel>` attribute with value `stylesheet` to specify relationship. 
+    
+    - `<href>` attribute is used to identify the location, or path of CSS file. 
 
+    - Example:
+    ```html 
+    <head>
+      <link rel="stylesheet" href="main.css">
+    </head>
+    ```
+
+  ### CSS Resets 
+  - Each web browser has default styles for different elements.
+    - CSS resets used to ensure cross-browser compatibility.
+    - Take every common HTML element with predefined style and provide one unified style for all browsers. 
+      - Removing sizing, margins, padding, or additional styles. 
+        - Must be at the top of the stylesheet. (renders top to bottom)
+          - Eric Meyer's reset is one of most popular. 
+
+    
+## Lesson 2: Getting to Know HTML
+
+### Semantics within HTML
+
+- Giving content on the page meaning and structure by using the proper element. 
+  - Semantic code describes the *value* of content on a page, regardless of the style or appearance of that content. 
+    - tags such as <header>, <footer>, <nav>, <article>, and <section> are semantic tags because they describe the type and purpose of the content they contain.
+
+- Benefits to using semantic elements:
+  - enabling computers, screen readers, search engines, etc. to read and understand content on a web page. 
+  - easier to manage and work with by showing exactly what each piece of content is about. 
+
+
+      #### Block vs Inline elements
+
+      - Block-level elements
+        - begin on a new line
+        - stacked on top of each other
+        - occupy any available width
+        - may be nested inside one another and may wrap inline-level elements. 
+
+        - Most common appearance in code:
+          - larger pieces of content such as paragraphs
+
+      - Inline-level elements
+        - do not begin on new line
+        - fall into normal flow of document
+        - lined up one after another
+        - may wrap inline-level elements
+
+          - Most common appearance in code: 
+            - smaller pieces of content, such as a few words. 
+
+
+  ### `<div>` and `<span>`
+
+  **Provide ability to apply targeted styles to a contained set of content**
+  
+  - `<div>`
+    - block-level element
+    - used to identify large groupings of content
+  - `<span>`
+    - inline-level element
+    - used to identify smaller groupings of text within a block-level element. 
 
 
 
