@@ -379,8 +379,220 @@
   ```
 
 
+  #### Bold Text with Strong
+  - `<strong>` in-line level element. 
+    - semantically used to give strong importance to text, and is most popular option for bolding text. 
+  - `<b>` element
+    - stylistically offset the text
+    - not always best for text deserving prominent attention. 
 
+  ```html
+  <!-- strong importance -->
+  <p><strong>Caution:</strong> Falling rocks.</p>
+
+  <!-- Stylistically offset -->
+  <p>This recipe calls for <b>bacon</b> and <b>baconnaise</b>.</p>
+  ```
+
+  #### Italicize with Emphasis
+  - Use `<em>` inline-level elements.
+    - most popular for placing stressed emphasis on the text. 
+
+  - `<i>` elements used semantically to convey alternative voice or tone.
+
+  ```html
+  <p>I <em>love</em> Chicago!</p>
+
+  <p>The name <i>Shay</i> means gift.</p>
+  ```
+
+### Building Structure 
+
+- Header
+  - `<header>` element used to identify top of page, article, section. 
+  - may include heading, introductory text, or navigation. 
+
+  #### `<header>` vs `<head>` vs `<h1>`-`<h6>`. 
+
+  - `<header>` is structural element outlines heading of a segment of a page. 
+    - falls within the `<body>` element. 
+
+  - `<head>` is not displayed on page and used to outline metadata, including the document title, and links to external files.
+    - falls within the `<html>` element. 
+
+  - `<h1>`-`<h6>` used to designate multiple levels of text headings throughout the page.
+
+
+- Navigation
+  - `<nav>` element
+    - identifies section of major navigational links on a page. 
+    - reserved for primary navigation sections only (table of contents, previous/next links, etc.)
+
+    - Links included within the `<nav>` element will link to other pages within the same website, or parts of the same page. 
+    - Misc, one-off links should use the `<a>` anchor element. 
+
+
+- Article
+  - `<article>` element
+  - Used to identify section of independent, self-contained content that may be independently distributed/reused. 
+    - Often used for blog posts, newspaper articles, user-submitted content, etc. 
+  - Must first determine if content within the element could be replicated elsewhere without any confusion. 
+
+
+- Section
+  - `<section>` element
+  - Used to identify thematic grouping of content, which generally includes a heading. 
+  - Breaks up and provides hierarchy to page.
+
+
+### Deciding between `<article>`, `<section>`, or `<div>` elements. 
+
+- Determined based on the content.
+
+- `<article>` and `<section>` contribute to document structure and outlines the content. 
+  - if content grouped solely for styling purposes and does not provide value ot the outline of a document, use `<div>`.
+
+- If content adds to document outline and can be independently reused, use `<article>` element. 
+
+- If content adds to document outline and represents a thematic group of content, use the `<section>` element. 
+
+
+
+- Aside 
+  - `<aside>` element holds content such as: 
+    - sidebars
+    - inserts
+    - brief explanations
+  - block-level element (occupies the full width of the page, or element they are nested within (parent))
   
+- Footer
+  - `<footer>` element identifies the end of the page, article, section, or other segment. 
+  - usually found at bottom of its parent element. 
+  - includes relative content and should not diverge from document or section it is included within. 
+
+
+### Encodings
+- The <h3> element within our <header> element, as well as the <small> element within our <footer> element, has some interesting things going on. Specifically, a few special characters within these elements are being encoded.
+
+- Special characters include various punctuation marks, accented letters, and symbols. When typed directly into HTML, they can be misunderstood or mistaken for the wrong character; thus they need to be encoded.
+
+- Each encoded character will begin with an ampersand, &, and end with a semicolon, ;. What falls between the ampersand and semicolon is a character’s unique encoding, be it a name or numeric encoding.
+
+
+### Creating Hyperlinks 
+- Use `<a>` anchor inline-level element along with `<href>` attribute which identifies the destination of the link. 
+
+```html
+<a href="http://shayhowe.com">Shay</a>
+```
+
+  - The above will display `Shay` on the page, and when clicked, will link to website.
+
+  - Must use relative path for pages on same site. Linking outside of current site must include full domain. 
+
+
+  #### Linking to email address.
+  
+  - `<href>` value must start with `mailto:` followed by the email where it should be sent. 
+
+  ```html
+  <a href="mailto:lstep@gnail.com">Email Me</a>
+  ```
+
+  - Altogether, a link to shay@awesome.com with the subject of “Reaching Out” and body text of “How are you” would require an href attribute value of: 
+  ```html 
+  <a href="mailto:shay@awesome.com?subject=Reaching%20Out&body=How%20are%20you">Email Me</a>
+  ```
+
+
+  #### Opening links in new window
+  - use `<target>` attribute, with value of `_blank` which specifies a new window. 
+  ```html
+  <a href="http://google.com/" target="_blank">Google</a>
+  ```
+
+  #### Links to parts of same page
+  - set `id` attribute on the element we wish to link to
+  - use value of `id` attribute within an anchor element's `href` attribute.
+
+  - Example: Back to Top
+  ```html
+  <body id="top">
+    ...
+    <a href="#top">Back to top</a>
+    ...
+  </body>
+  ```
+
+
+### Summary for Getting to Know HTML
+
+Once again, in this lesson we covered the following:
+
+  - What semantics are and why they are important
+  
+  - <div>s and <spans>s, and the difference between block- and inline-level elements
+  
+  - Which text-based elements best represent the content of a page
+  
+  - The HTML5 structural elements and how to define the structure and organization of our content and page
+  
+  - How to use hyperlinks to navigate between web pages or websites
 
 
 
+
+## Getting to Know CSS
+
+### The Cascade 
+  - Stylesheet cascades top to bottom.
+
+- Calculating Specificity
+  - Every selector has a specificity weight. 
+    - Weight, along with placement in the cascade identifies how its styles will be rendered.
+  
+  - Selectors:
+    - `<type>` lowest specificity weight with point value `0-0-1`
+    - `<class>` medium specificity weight with point value `0-1-0`
+    - `<id>` high specificity weight with point value `1-0-0`
+
+  #### Combining selectors 
+  - Used to be more specific about which elements or group of elements we would like to select. 
+
+  - Example: select all paragraph elements that reside within an element with a class attribute of `hotdog` and set their background color to `brown`. However, if one of the paragraphs happens to have class attribute value of `mustard` we want to set its background color to `yellow`. 
+
+  ```html 
+  <div class="hotdog">
+    <p>...</p>
+    <p>...</p>
+    <p class="mustard">...</p>
+  </div>
+  ```
+
+  ```css
+  .hotdog p {
+    background: brown;
+  }
+  .hotdog p.mustard {
+    background: yellow;
+  }
+  ```
+
+- Key points in combining selectors:
+  - should be read from right to left
+    - the selector furthest to the right, directly before the opening `{` is known as the *key* selector.
+    - Key selector identifies exactly which element styles will be applied to. 
+    - Any selector to the left of the key selector will serve as a pre-qualifier. 
+
+  - Example from above: 
+  
+  `.hotdog p` includes two selectors, a class and type selector. 
+  
+  - `p` is key selector targeting paragraph elements
+  - `.hotdog` is a pre-qualified class selector 
+  - This will select only paragraph elements that reside within an element with a class attribute value of `hotdog`.
+
+#### Three selectors
+`.hotdog p.mustard` 
+
+- Key is class selector `mustard` with two pre-qualifiers. 
