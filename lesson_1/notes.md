@@ -337,7 +337,50 @@
     - used to identify smaller groupings of text within a block-level element. 
 
 
+  ##### Comments in HTML
+    - Start with `<!--` and end with `-->`. 
 
+  ##### Comments in CSS 
+    - Start with `/*` and end with `*/`.
+
+  
+### Text-based Elements 
+  - Headings, paragraphs, bold-text 
+
+#### Headings
+  - Block level elements
+  - Six rankings
+    - `<h1>` - `<h6>`
+  - Break up content, assist search engines, user experience.
+
+  - Headings should be used in order relevant to content of the page. 
+
+  - Each heading should be semantically valued, and not used ot make text bold or big (better ways to do this.)
+
+  - Example
+  ```html
+  <h1>Headings Level 1</h1>
+  <h2>Headings Level 2</h2>
+  <h3>Headings Level 3</h3>
+  <h4>Headings Level 4</h4>
+  ...
+  ```
+
+
+#### Paragraphs
+  - Headings often followed by supporting paragraphs. 
+  - Defined by `<p>` block element.
+
+  - Example: 
+  ```html 
+  <p>Steve Jobs was co-founder and longtime chief executive of Apple.</p>
+
+  <p>In his address, Steve urged graduates to follow their dreams.</p>
+  ```
+
+
+
+  
 
 
 
