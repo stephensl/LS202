@@ -596,3 +596,46 @@ Once again, in this lesson we covered the following:
 `.hotdog p.mustard` 
 
 - Key is class selector `mustard` with two pre-qualifiers. 
+  - `p` is paragraph type selector
+  - `hotdog` is a class selector. 
+- This will select paragraphs with a class attribute value of `mustard` that reside within an element with the class attribute value of `hotdog`. 
+
+### Specificity Within Combined Selectors
+
+- When combined, selector specificity weights are as well. 
+
+- Weights calculated by counting each different type of selector within a combined selector. 
+  - Examples:
+  
+  ```css
+  .hotdog p
+  ```
+  Above combined class selector(0-1-0) and type selector(0-0-1) == total of `0-1-1`
+
+  ```css
+  .hotdog p.mustard
+  ```
+  Above combined selector weight: two class selectors and one type selector == `0-2-1`
+
+
+  **The higher specificity weight takes precedence even if occurs first in the cascade**
+
+
+### Keeping Weights Low
+- Modularity
+  - different styles by using multiple classes
+  - Elements in HTML can have more than one class attribute value (space separated)
+
+
+### Common CSS Property Values
+
+- Colors
+  - Represented in CSS by:
+    - keywords
+      - limited options
+    - hexadecimal notation
+      - first two chars = red channel
+      - third and fourth chars = green channel
+      - last two chars = blue channel
+    - RGB values
+    - HSL values
