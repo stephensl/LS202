@@ -639,3 +639,15 @@ Once again, in this lesson we covered the following:
       - last two chars = blue channel
     - RGB values
     - HSL values
+
+- Lengths
+  - May be absolute or relative
+  - Absolute lengths
+    - Fixed to a physical unit of measurement (pixel `px`)
+    - The pixel is equal to 1/96th of an inch, so there are 96 pixels in an inch. 
+  - Relative lengths
+    - rely on the length of another measurement. 
+    - Percentage lengths 
+      - calculated in relation to the parent element. 
+    - `em` unit
+      - single `em` unit is equivalent to an element's font size. 
