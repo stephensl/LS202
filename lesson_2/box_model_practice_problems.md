@@ -379,9 +379,9 @@ article {
 
 *Answer*
 
-Putting the `article` elements on separate lines in the HTML, browser ses the whitespace (newline and several spaces in this case). The browser collapses the whitespace into a single space character and uses the result as content between teh elements. 
+Putting the `article` elements on separate lines in the HTML, browser sees the whitespace (newline and several spaces in this case). The browser collapses the whitespace into a single space character and uses the result as content between the elements. 
 
-The two articles take up 900px total (450px each) + a dew more pixels to account for space character.
+The two articles take up 900px total (450px each) + a few more pixels to account for space character.
 
 The section width is 900px total, and the two articles plus the space would exceed this width. 
 
